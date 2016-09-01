@@ -5,31 +5,39 @@
   height: 100vh;
 }
 
+
 header {
-  background-color: #4E274C;
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  & > div {
+    height: 100%;
+  }
+  .logo {
+    display: block;
+    width: 202px;
+  }
 }
 
 main {
-  padding: 1em;
-  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin-top: 50px;
   flex: 1 0 auto;
 }
 
 footer {
   text-align: center;
   font-size: 0.8em;
-  background-color: #2C102B;
+  color: #FFF;
+
+  .logo {
+    margin: 0 20px;
+
+    &.wl-logo {
+      position: relative;
+      top: -16px;
+      width: 180px;
+    }
+
+    &.compass-logo {
+      width: 180px;
+    }
+  }
 }
 
-.shield {
-  width: 750px;
-  height: 450px;
-}

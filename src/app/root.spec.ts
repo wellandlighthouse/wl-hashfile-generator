@@ -15,14 +15,14 @@ import {MockBackend} from '@angular/http/testing';
 import {provide} from "@angular/core";
 
 // Load the implementations that should be tested
-import {Api} from './services/api/index';
+// import {Api} from './services/api/index';
 import {App} from './index';
 
 describe('App', () => {
   // provide our implementations or mocks to the dependency injector
   beforeEachProviders(() => [
     App,
-    Api,
+    // Api,
     BaseRequestOptions,
     MockBackend,
     // Provide a mocked (fake) backend for Http
@@ -41,7 +41,7 @@ describe('App', () => {
   describe('pipes', function() {});
 
   describe('services', function() {
-    require('./services/api/spec');
+    // require('./services/api/spec');
   });
 
   describe('subcomponents', function() {

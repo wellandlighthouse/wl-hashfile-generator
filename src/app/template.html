@@ -1,17 +1,20 @@
 <header>
-  <nav>
-    <a [routerLink]="['Home']">Home</a>
-    <a [routerLink]="['About']">About</a>
-  </nav>
+	<div class="container-fluid">
+		<a class="logo" ui-sref="home">
+			<img alt="Application Logo" src="img/compass_logo_header.svg">
+		</a>
+	</div>
 </header>
 <main>
-  <h1 class="title">Hello from {{api.title}} !</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img class="shield" src="img/shield-with-beta.png">
-
-  <router-outlet></router-outlet>
+	<router-outlet></router-outlet>
 </main>
 <footer>
-  <a href="{{ url }}">Webpack Angular 2 Starter</a>
+	<div class="fullheight flex-center">
+		<div class="logo wl-logo">
+			<img alt="Well & Lighthouse Logo" src="img/wl-logo.svg">
+		</div>
+		<div class="logo compass-logo">
+			<img alt="Compass Logo" src="img/compass-logo-footer.svg">
+		</div>
+	</div>
 </footer>
