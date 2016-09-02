@@ -60,8 +60,13 @@ main {
         margin: 0 auto;
 
         .well {
+            background: #FFF;
             border: 1px solid #F2F2F2;
             border-radius: 5px;
+
+            p {
+                color: $blue4;
+            }
         }
     }
 
