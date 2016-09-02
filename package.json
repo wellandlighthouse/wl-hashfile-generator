@@ -37,7 +37,7 @@
     "webdriver-start": "webdriver-manager start",
     "webdriver-update": "webdriver-manager update",
     "electron": "electron main.js",
-    "package": "electron-packager ./ --out=dist --platform=darwin --arch=x64 --prune --overwrite"
+    "package": "electron-packager ./ --out=packages --platform=darwin --arch=x64 --prune --overwrite"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",

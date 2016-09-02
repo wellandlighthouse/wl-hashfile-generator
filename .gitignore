@@ -22,6 +22,7 @@ reports/
 # Build
 build/
 dist/
+packages/
 .tmp
 .cache/
 
