@@ -3,6 +3,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {CsvData} from '../../services/csvdata';
 import {HasherService} from '../../services/hasher';
 import * as _ from 'lodash';
+import * as path from 'path';
 
 var fileSaver = require('file-saver');
 /* beautify ignore:end */
@@ -52,12 +53,16 @@ export class FieldMapperComponent {
     save() {
         let newData = this.filterData();
         let newCsv = this.csvData.convertToCSV(newData);
+        let baseFileName = path.basename(
+            this.csvData.getFile().name,
+            path.extname(this.csvData.getFile().name)
+        );
 
         // Check to see if we have access to Electron functionality
         if (typeof electron !== 'undefined') {
             let saveDialog = electron.dialog;
             let fileOpts = {
-                defaultPath: this.csvData.getFile().name + ' (hashed).csv',
+                defaultPath: baseFileName + ' (hashed).csv',
                 filters: [
                     { name: 'Comma-Delimited', extensions: ['csv', 'txt'] },
                 ]
@@ -80,7 +85,7 @@ export class FieldMapperComponent {
         } else {
             // No Electron, use FileSaver.js
             let blob = new Blob([newCsv], { type: 'text/csv' });
-            fileSaver.saveAs(blob, this.csvData.getFile().name + ' (hashed)');
+            fileSaver.saveAs(blob, baseFileName + ' (hashed)');
             this.stepComplete.emit(true);
         }
     }
