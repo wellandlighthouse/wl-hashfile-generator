@@ -41,7 +41,9 @@
     "webdriver-start": "webdriver-manager start",
     "webdriver-update": "webdriver-manager update",
     "electron": "electron main.js",
-    "package": "electron-packager ./ --out=packages --platform=darwin --arch=x64 --prune --overwrite"
+    "package": "electron-packager ./ --out=packages --platform=darwin --arch=x64 --prune --overwrite",
+    "package-win": "electron-packager ./ --out=packages --platform=win32 --arch=x64 --prune --overwrite",
+    "package-all": "electron-packager ./ --out=packages --platform=all --arch=x64 --prune --overwrite"
   },
   "build": {
     "appId": "your.id",
