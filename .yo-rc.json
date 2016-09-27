@@ -1,6 +1,0 @@
-{
-  "generator-ng2-webpack": {
-    "appname": "wl-hashfile-generator",
-    "clientFolder": "src"
-  }
-}
