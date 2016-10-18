@@ -17,6 +17,18 @@ a {
     color: #03A9F4;
 }
 
+app-root {
+    display: block;
+    height: 100vh;
+
+    .preload {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
+    }
+}
 
 header {
 	height: 70px;
