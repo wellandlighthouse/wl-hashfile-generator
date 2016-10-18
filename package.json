@@ -11,7 +11,8 @@
     "e2e": "protractor",
     "build-electron": "tsc --outDir dist src/electron/main.ts && cp src/electron/package.json dist",
     "build": "ng build && npm run build-electron",
-    "electron": "electron dist/main.js"
+    "electron": "electron dist/main.js",
+    "electron-build": "npm run build && build"
   },
   "private": true,
   "dependencies": {
@@ -45,6 +46,7 @@
     "angular-cli": "^1.0.0-beta.17",
     "codelyzer": "~0.0.26",
     "electron": "^1.4.3",
+    "electron-builder": "^7.14.1",
     "electron-packager": "^8.1.0",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
@@ -57,5 +59,15 @@
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
     "typescript": "2.0.2"
+  },
+  "directories": {
+    "output": "packages",
+    "app": "dist",
+    "buildResources": "build"
+  },
+  "build": {
+    "appId": "com.wellandlighthouse.wl-hashfile-generator",
+    "dmg": {},
+    "win": {}
   }
 }

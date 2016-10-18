@@ -1,5 +1,8 @@
 {
   "name": "wl-hashfile-generator",
+  "productName": "List Encryption Tool",
+  "description": "A program for hashing specified fields of delimited text files for use in list swaps",
   "version": "0.2.0",
-  "main"    : "main.js"
+  "main"    : "main.js",
+  "author": "J.C. Quirin <jc@wellandlighthouse.com>"
 }
