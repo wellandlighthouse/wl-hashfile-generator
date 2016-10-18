@@ -1,0 +1,43 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th class="text-center">Include</th>
+			<th class="text-center">Encrypt</th>
+			<th>
+				<span class="sr-only">Column / Sample</span>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let field of fields" [ngClass]="{included: field.include}">
+			<td>
+				<label>
+					<span class="fa-stack fa-sm">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="check fa fa-check fa-stack-1x" *ngIf="field.include"></i>
+					</span>
+					<input type="checkbox" [(ngModel)]="field.include" style="display:none;">
+				</label>
+			</td>
+			<td>
+				<label [ngClass]="{disabled: !field.include}">
+					<span class="fa-stack fa-sm">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="check fa fa-check fa-stack-1x" *ngIf="field.encrypt"></i>
+					</span>
+					<input type="checkbox" [(ngModel)]="field.encrypt" [disabled]="!field.include" style="display:none;">
+				</label>
+			</td>
+			<td class="text-left">
+				<span class="field-name">{{ field.name }}:</span>
+				<span class="field-sample">{{ getFieldSample(field) }}</span>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="text-center">
+	<button class="btn btn-primary" (click)="save()" [disabled]="!hasSelectedFields()">
+		<span>Save</span>
+	</button>
+</div>
