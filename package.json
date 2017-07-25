@@ -1,6 +1,6 @@
 {
   "name": "wl-hashfile-generator",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -12,7 +12,8 @@
     "build-electron": "tsc --outDir dist src/electron/main.ts && cp src/electron/package.json dist",
     "build": "ng build && npm run build-electron",
     "electron": "electron dist/main.js",
-    "electron-build": "npm run build && build"
+    "electron-build": "npm run build && build",
+    "package": "electron-packager dist --out=packages --overwrite"
   },
   "private": true,
   "dependencies": {
