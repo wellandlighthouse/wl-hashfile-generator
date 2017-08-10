@@ -69,6 +69,15 @@ export class CsvDataService {
         parsed = papa.parse(this._raw, {
           header: headerRow
         });
+        if (parsed.errors.length) {
+          for (let err of parsed.errors) {
+            console.log(`Error parsing file`, err);
+            if (err.code == 'UndetectableDelimiter') {
+              this._errors.push({ status: 'error', code: err.code });
+            }
+          }
+        }
+        // We should probably halt on other parsing errors instead of populating this
         this._data = parsed.data;
         break;
       case 'newline':
