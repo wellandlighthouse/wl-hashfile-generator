@@ -1,8 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SelectModule } from 'ng2-select';
-var papa = require('papaparse');
+
 import { HasherService, CsvDataService } from '../../shared/';
 
+declare var require:any;
+const papa = require('papaparse');
 
 @Component({
   selector: 'uploader',

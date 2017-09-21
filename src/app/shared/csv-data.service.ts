@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { HasherService } from './hasher.service';
 
-var papa = require('papaparse');
+declare var require:any;
+
+const papa = require('papaparse');
 
 @Injectable()
 export class CsvDataService {

@@ -16,7 +16,7 @@ label.btn-upload {
 	height: 100%;
 	width: 100%;
 	padding: 86px 20px 20px;
-	background: url(assets/img/upload.svg) no-repeat;
+	background: url(/assets/img/upload.svg) no-repeat;
 	background-position: center 20px;
 	background-size: 66px;
 
@@ -54,11 +54,11 @@ label.btn-upload {
 			border: none;
 
 			&.remove {
-				background: url(assets/img/upload_delete_btn.svg);
+				background: url(/assets/img/upload_delete_btn.svg);
 			}
 			&.replace {
 				cursor: pointer;
-				background: url(assets/img/upload_new_btn.svg);
+				background: url(/assets/img/upload_new_btn.svg);
 			}
 		}
 	}

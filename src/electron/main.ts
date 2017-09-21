@@ -1,3 +1,7 @@
+declare var require:any;
+declare var __dirname:any;
+declare var process:any;
+
 const {app, BrowserWindow} = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import * as _ from 'lodash';
-const md5 = require('md5');
+import * as md5 from 'md5';
 
 @Injectable()
 export class HasherService {

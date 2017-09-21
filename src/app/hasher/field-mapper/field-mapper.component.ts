@@ -4,16 +4,18 @@ import * as _ from 'lodash';
 import * as path from 'path';
 
 // import {remote, ipcRenderer} from 'electron';
-declare var require:any;
+declare var require: any;
 // const fs = require('fs');
 // import * as fs from 'fs';
-declare var electron:any;
-declare var fs:any;
+declare var electron: any;
+declare var fs: any;
 
 var fileSaver = require('file-saver');
 
 export interface Field {
-  name: string
+  name: string,
+  include?: boolean,
+  encrypt?: boolean,
 }
 
 @Component({

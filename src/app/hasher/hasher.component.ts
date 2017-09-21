@@ -15,9 +15,7 @@ export class HasherComponent implements OnInit {
 	private step = 1;
 	private wizardOpts: {};
 
-	constructor(private csvData: CsvDataService) {
-
-	}
+	constructor(private csvData: CsvDataService) { }
 
 	ngOnInit() {
 		this.wizardOpts = {
