@@ -1,8 +1,8 @@
-declare var require:any;
-declare var __dirname:any;
-declare var process:any;
+declare var require: NodeRequire;
+declare var __dirname: string;
+declare var process: NodeJS.Process;
 
-const {app, BrowserWindow} = require('electron')
+const { app, BrowserWindow } = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
