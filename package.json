@@ -13,7 +13,7 @@
     "build": "ng build && npm run build-electron",
     "electron": "electron dist/main.js",
     "electron-build": "npm run build && build",
-    "package": "electron-packager dist --out=packages --overwrite"
+    "package": "electron-packager dist --out=packages --overwrite --icon=build/icon.icns"
   },
   "private": true,
   "dependencies": {
