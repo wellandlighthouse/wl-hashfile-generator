@@ -13,7 +13,9 @@
     "build": "ng build && npm run build-electron",
     "electron": "electron dist/main.js",
     "electron-build": "npm run build && build",
-    "package": "electron-packager dist --out=packages --overwrite --icon=build/icon.icns"
+    "package": "npm run package-mac && npm run package-win",
+    "package-mac": "electron-packager dist --out=packages --platform=darwin --arch=x64 --overwrite --icon=build/icon.icns",
+    "package-win": "electron-packager dist --out=packages --platform=win32 --arch=x64 --overwrite --icon=build/icon.icns"
   },
   "private": true,
   "dependencies": {
